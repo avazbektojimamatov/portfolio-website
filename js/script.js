@@ -101,10 +101,8 @@ function sendMessage() {
   axios.get(url)
     .then(function (response) {
       console.log(response);
-      alert('Message sent!');
     })
     .catch(function (error) {
       console.log(error);
-      alert('Message failed to send.');
     });
 }
