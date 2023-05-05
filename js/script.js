@@ -100,16 +100,42 @@ function sendMessage() {
   var token = '6040569885:AAEpi3Td5XuIrOrrRcyf3nEHt7hFUroS0m0';
   var text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
   var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
+
+  // Проверяем, что обязательные поля заполнены
+  if (name.trim() === '' || phone.trim() === '' || message.trim() === '') {
+    Swal.fire({
+      icon: 'error',
+      title: 'Please fill in all required fields.',
+      showConfirmButton: false,
+      timer: 1500,
+      background: '#323946',
+      color: 'white'
+    });
+    return;
+  }
+
   axios.get(url)
     .then(function (response) {
-      alert('Message sent');
+      Swal.fire({
+        icon: 'success',
+        title: 'Message sent',
+        showConfirmButton: false,
+        timer: 1500,
+        background: '#323946',
+        color: 'white'
+      });
       nameInput.value = '';
       phoneInput.value = '';
       messageInput.value = '';
       console.log(response);
     })
     .catch(function (error) {
-      alert('Failed to send message');
+      Swal.fire({
+        icon: 'error',
+        title: 'Failed to send message',
+        text: 'Please try again later'
+      });
       console.log(error);
     });
 }
+

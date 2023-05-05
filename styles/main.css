@@ -39,6 +39,10 @@
   --main-color: #0ef;
 }
 
+.swal2-popup {
+  background-color: var(--second-bg-color);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
