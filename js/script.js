@@ -90,19 +90,26 @@ function formatPhoneNumber() {
 
 // Form submit to telegram
 function sendMessage() {
-  var name = document.querySelector('input[type="text"][placeholder="Full Name"]').value;
-  var email = document.querySelector('input[type="email"][placeholder="Email Address"]').value;
-  var phone = document.getElementById('phone-input').value;
-  var message = document.querySelector('textarea[name="message"]').value;
+  var nameInput = document.querySelector('input[type="text"][placeholder="Full Name"]');
+  var phoneInput = document.getElementById('phone-input');
+  var messageInput = document.querySelector('textarea[name="message"]');
+  var name = nameInput.value;
+  var phone = phoneInput.value;
+  var message = messageInput.value;
   var chatId = '-897613182';
   var token = '6040569885:AAEpi3Td5XuIrOrrRcyf3nEHt7hFUroS0m0';
-  var text = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+  var text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${message}`;
   var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
   axios.get(url)
     .then(function (response) {
+      alert('Message sent');
+      nameInput.value = '';
+      phoneInput.value = '';
+      messageInput.value = '';
       console.log(response);
     })
     .catch(function (error) {
+      alert('Failed to send message');
       console.log(error);
     });
 }
