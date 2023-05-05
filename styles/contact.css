@@ -1,3 +1,8 @@
+.contact {
+  min-height: auto;
+  background: var(--second-bg-color); 
+}
+
 .contact form {
   max-width: 70rem;
   margin: 1rem auto;
@@ -17,7 +22,7 @@
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: var(--second-bg-color);
+  background: var(--bg-color);
   border-radius: .8rem;
   margin: .7rem 0;
 }
@@ -35,13 +40,17 @@
   cursor: pointer;
 }
 
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
-  background: var(--second-bg-color);
+  background: var(--bg-color);
 }
 
 .footer-text p {
