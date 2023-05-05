@@ -7,7 +7,7 @@
 .home-img img {
   width: 35vw;
   animation: floatImage 4s ease-in-out infinite;
-  box-shadow: 0 0 0 20 var(--main-color);
+  box-shadow: 0 0 0 var(--main-color);
 }
 
 @keyframes floatImage {
