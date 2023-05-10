@@ -69,9 +69,13 @@
   background: var(--text-color);
   border-radius: 50%;
 }
+.portfolio-layer .links {
+  display: flex;
+  gap: 3rem;
+}
 
 .portfolio-layer a i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--second-bg-color);
 }
 
@@ -79,9 +83,89 @@
 @media (max-width: 120px){
 }
 
+@media (max-width: 1210px){
+  .portfolio-layer h4 {
+    font-size: 2rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1.4rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-layer a {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 1015px){
+  .portfolio-layer h4 {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1.2rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-layer a {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
 @media (max-width: 991px) {
   .portfolio {
     padding-bottom: 7rem;
+  }
+
+  .portfolio-box .portfolio-layer{
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 867px) {
+  .portfolio-layer h4 {
+    font-size: 1.8rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1.1rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-layer a {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+@media (max-width: 867px) {
+  .portfolio-layer h4 {
+    font-size: 1.7rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 1.4rem;
+  }
+
+  .portfolio-layer a {
+    width: 2.8rem;
+    height: 2.8rem;
   }
 }
 
@@ -93,11 +177,55 @@
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .portfolio-layer h4 {
+    font-size: 2.8rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1.4rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-layer a {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .portfolio-layer h4 {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 617px){
   .portfolio-container {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-layer h4 {
+    font-size: 3.5rem;
+  }
+
+  .portfolio-layer p{
+    font-size: 2rem;
+  }
+
+  .portfolio-layer a i {
+    font-size: 2rem;
+  }
+
+  .portfolio-layer a {
+    width: 4.5rem;
+    height: 4.5rem;
   }
 }
 
