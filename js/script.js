@@ -139,3 +139,20 @@ function sendMessage() {
     });
 }
 
+function downloadCV() {
+  // URL файла для скачивания
+  const cvUrl = "https://www.dropbox.com/s/qnhft6bjma0relu/%D0%A2%D0%BE%D0%B6%D0%B8%D0%BC%D0%B0%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%20%D0%90%D0%B2%D0%B0%D0%B7%D0%B1%D0%B5%D0%BA.pdf?dl=0";
+
+  // Создаем ссылку для скачивания
+  const link = document.createElement("a");
+  link.href = cvUrl;
+  link.download = "Avazbek_Tojimamatov_CV.pdf"; // Имя файла для сохранения
+
+  // Добавляем ссылку на страницу и эмулируем клик для скачивания файла
+  document.body.appendChild(link);
+  link.click();
+
+  // Удаляем ссылку после скачивания
+  document.body.removeChild(link);
+}
+
